@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Si intentan entrar a la carpeta 'public', los dejamos pasar normal
+    RewriteRule ^public/(.*)$ public/$1 [L]
+
+    # Para cualquier otra ruta, redirigimos silenciosamente a public/index.php
+    # Pasando la ruta original como un parámetro oculto si lo deseas en el futuro
+    RewriteRule ^(.*)$ public/index.php [L,QSA]
+</IfModule>
