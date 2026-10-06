@@ -5,7 +5,6 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-
 // 2. Verificar si NO existe la variable de sesión que identifica al usuario
 if (!isset($_SESSION['usuario_id'])) {
     //$_SESSION['usuario_rol']
@@ -27,7 +26,7 @@ if (!isset($_SESSION['usuario_id'])) {
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Sistema de Inventario y Ventas</title>
+    <title>Escuela Bíblica MEI · NJCP</title>
 
     <link href="/SisInventarioVentas/public/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="/SisInventarioVentas/public/css/reporte.css" rel="stylesheet" type="text/css">
@@ -50,11 +49,11 @@ if (!isset($_SESSION['usuario_id'])) {
                         <path d="M14.185 13.14l5.644 -2.202c1.625 -.634 1.538 -2.962 -.13 -3.473l-14.319 -4.382c-1.41 -.431 -2.73 .888 -2.298 2.298l4.382 14.318c.51 1.668 2.84 1.755 3.473 .13l2.202 -5.644a1.84 1.84 0 0 1 1.045 -1.045" />
                     </svg>
                 </div>
-                <div class="sidebar-brand-text mx-3">SIINVEN</div>
+                <div class="sidebar-brand-text mx-3">MEI · NJCP</div>
             </a>
 
             <hr class="sidebar-divider my-0">
-            <?php if($_SESSION['usuario_rol']==1||$_SESSION['usuario_rol']==2||$_SESSION['usuario_rol']==3):?>
+            <?php if($_SESSION['usuario_rol']==1||$_SESSION['usuario_rol']==4):?>
                 <li class="nav-item">
                     <a class="nav-link" href="index.php?modulo=dashboard&accion=home">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-home-2">
@@ -68,6 +67,36 @@ if (!isset($_SESSION['usuario_id'])) {
                 </li>
 
 
+                <hr class="sidebar-divider">
+            <?php endif;?>
+
+            <?php if($_SESSION['usuario_rol']==1 || $_SESSION['usuario_rol']==4):?>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php?modulo=escuela&accion=asistencia">
+                        <i class="fas fa-fw fa-clipboard-check"></i>
+                        <span>Asistencia</span>
+                    </a>
+                </li>
+                <?php if($_SESSION['usuario_rol']==1):?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.php?modulo=escuela&accion=estudiantes">
+                            <i class="fas fa-fw fa-user-graduate"></i>
+                            <span>Estudiantes</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.php?modulo=escuela&accion=secciones">
+                            <i class="fas fa-fw fa-chalkboard"></i>
+                            <span>Secciones</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.php?modulo=escuela&accion=inventario">
+                            <i class="fas fa-fw fa-boxes"></i>
+                            <span>Inventario escolar</span>
+                        </a>
+                    </li>
+                <?php endif;?>
                 <hr class="sidebar-divider">
             <?php endif;?>
 
@@ -85,81 +114,6 @@ if (!isset($_SESSION['usuario_id'])) {
                         </svg>
                         <span>Usuarios</span>
                     </a>
-                </li>
-            <?php endif;?>
-
-            
-            <?php if($_SESSION['usuario_rol']==1||$_SESSION['usuario_rol']==2):?>
-
-
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseVentas" aria-expanded="true" aria-controls="collapseVentas">
-                        <i class="fas fa-fw fa-cash-register"></i>
-                        <span>Ventas</span>
-                    </a>
-                    <div id="collapseVentas" class="collapse" aria-labelledby="headingVentas" data-parent="#accordionSidebar">
-                        <div class="bg-white py-2 collapse-inner rounded">
-                            <h6 class="collapse-header">Gestión de Ventas:</h6>
-                            <a class="collapse-item" href="index.php?modulo=ventas&accion=crear">Nueva Venta</a>
-                            <a class="collapse-item" href="index.php?modulo=ventas&accion=historial">Historial de Ventas</a>
-                        </div>
-                    </div>
-                </li>
-                <hr class="sidebar-divider">
-            <?php endif;?>
-
-            <?php if($_SESSION['usuario_rol']==1):?>
-
-
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-packages">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M7 16.5l-5 -3l5 -3l5 3v5.5l-5 3l0 -5.5" />
-                            <path d="M2 13.5v5.5l5 3" />
-                            <path d="M7 16.545l5 -3.03" />
-                            <path d="M17 16.5l-5 -3l5 -3l5 3v5.5l-5 3l0 -5.5" />
-                            <path d="M12 19l5 3" />
-                            <path d="M17 16.5l5 -3" />
-                            <path d="M12 13.5v-5.5l-5 -3l5 -3l5 3v5.5" />
-                            <path d="M7 5.03v5.455" />
-                            <path d="M12 8l5 -3" />
-                        </svg>
-                        <span>Productos</span>
-                    </a>
-                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                        <div class="bg-white py-2 collapse-inner rounded">
-                            <a class="collapse-item" href="index.php?modulo=productos&accion=listar">Gestionar Productos</a>
-                            <a class="collapse-item" href="index.php?modulo=categorias&accion=listar">Gestionar Categorias</a>
-                        </div>
-                    </div>
-                </li>
-                <hr class="sidebar-divider d-none d-md-block">
-            <?php endif;?>
-
-
-            <?php if($_SESSION['usuario_rol']==1||$_SESSION['usuario_rol']==3):?>
-
-
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseReportes" aria-expanded="true" aria-controls="collapseReportes">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-clipboard-smile">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M10 13h.01" />
-                            <path d="M14 13h.01" />
-                            <path d="M10 16a3.5 3.5 0 0 0 4 0" />
-                            <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
-                            <path d="M9 5a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2" />
-                        </svg>
-                        <span>Reportes</span>
-                    </a>
-                    <div id="collapseReportes" class="collapse" aria-labelledby="collapseReportes" data-parent="#accordionSidebar">
-                        <div class="bg-white py-2 collapse-inner rounded">
-                            <a class="collapse-item" href="index.php?modulo=dashboard&accion=reportes">Analisis</a>
-                            <a class="collapse-item" href="index.php?modulo=dashboard&accion=historial">Historial</a>
-                        </div>
-                        
-                    </div>
                 </li>
             <?php endif;?>
 

@@ -49,7 +49,7 @@ class usuarioModel {
 
     public function login($correo, $contrasena) {
     // 1. Usamos marcadores de posición (?) en lugar de concatenar las variables directamente
-    $sql = "SELECT * FROM usuarios WHERE correo = ? AND estado = b'1' LIMIT 1";
+    $sql = "SELECT * FROM usuarios WHERE correo = ? AND estado = b'1' AND id_rol IN (1, 4) LIMIT 1";
     
     $stmt = $this->db->prepare($sql);
     

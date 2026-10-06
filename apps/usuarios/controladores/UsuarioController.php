@@ -84,9 +84,9 @@ class UsuarioController {
             $id_rol = trim($_POST['id_rol'] ?? '');
             $correo = trim($_POST['correo'] ?? '');
             $estado = trim($_POST['estado'] ?? '');
-            if(empty($nombre_completo) || empty($id_rol) || empty($correo)){
+            if(empty($nombre_completo) || !in_array($id_rol, ['1', '4'], true) || empty($correo)){
                 $_SESSION['error_mensaje'] = "Por favor, complete todos los campos.";
-                header("Location: index.php?modulo=usuarios&accion=listar");
+                header("Location: index.php?modulo=usuarios&accion=editar");
                 exit();
             }
 
@@ -125,7 +125,7 @@ class UsuarioController {
         $correo = trim($_POST['correo'] ?? '');
         $contra = trim($_POST['contrasena'] ?? '');
 
-        if(empty($nombre_completo) || empty($id_rol) || empty($correo) || empty($contra)){
+        if(empty($nombre_completo) || !in_array($id_rol, ['1', '4'], true) || empty($correo) || empty($contra)){
             $_SESSION['error_mensaje'] = "Por favor, complete todos los campos.";
             header("Location: index.php?modulo=usuarios&accion=listar");
             exit();

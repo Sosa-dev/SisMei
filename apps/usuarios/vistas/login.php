@@ -19,7 +19,7 @@ if (!isset($_SESSION['csrf_token'])) {
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Sistema Inventario y Ventas - Login</title>
+    <title>Escuela Bíblica MEI · NJCP - Iniciar sesión</title>
 
     <link href="/SisInventarioVentas/public/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -42,7 +42,8 @@ if (!isset($_SESSION['csrf_token'])) {
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">¡Bienvenido de nuevo!</h1>
+                                        <h1 class="h4 text-gray-900 mb-2">Escuela Bíblica MEI</h1>
+                                        <p class="text-muted mb-4">Niños y Jóvenes con Propósito (NJCP)</p>
                                     </div>
 
                                     <?php if (isset($_SESSION['error_mensaje'])): ?>

@@ -24,8 +24,7 @@
                                 <select class="form-control custom-select-user" id="id_rol" name="id_rol" required>
                                     <option value="" selected disabled>Selecciona un rol...</option>
                                     <option value="1">Administrador</option>
-                                    <option value="2">Vendedor</option>
-                                    <option value="3">Consultor</option>
+                                    <option value="4">Docente</option>
                                 </select>
                             </div>
 

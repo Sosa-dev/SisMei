@@ -25,10 +25,9 @@
                             <div class="form-group">
                                 <label class="text-xs font-weight-bold text-primary text-uppercase mb-1" for="id_rol">Rol asignado</label>
                                 <select class="form-control custom-select-user" id="id_rol" name="id_rol" required>
-                                    <option value="" disabled>Selecciona un rol...</option>
+                                    <option value="" selected disabled>Selecciona un rol...</option>
                                     <option value="1" <?php echo ($_SESSION['usuario_editar']['id_rol'] == 1) ? 'selected' : ''; ?>>Administrador</option>
-                                    <option value="2" <?php echo ($_SESSION['usuario_editar']['id_rol'] == 2) ? 'selected' : ''; ?>>Vendedor</option>
-                                    <option value="3" <?php echo ($_SESSION['usuario_editar']['id_rol'] == 3) ? 'selected' : ''; ?>>Consultor</option>
+                                    <option value="4" <?php echo ($_SESSION['usuario_editar']['id_rol'] == 4) ? 'selected' : ''; ?>>Docente</option>
                                 </select>
                             </div>
 
