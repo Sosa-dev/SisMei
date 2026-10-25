@@ -1,0 +1,10 @@
+[package]
+name = "sosa-dev/sismei"
+version = "0.1.0"
+description = "Sistema de Escuela Bíblica MEI"
+
+[[app.v1]]
+name = "sismei"
+using = "php"
+# Aquí le indicamos a Wasmer que la carpeta pública es 'public'
+directory = "public"
