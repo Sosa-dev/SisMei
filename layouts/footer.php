@@ -24,12 +24,12 @@
         </div>
     </div>
 
-    <script src="/SisMei/public/vendor/jquery/jquery.min.js"></script>
-    <script src="/SisMei/public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="<?php echo URL_BASE; ?>public/vendor/jquery/jquery.min.js"></script>
+    <script src="<?php echo URL_BASE; ?>public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <script src="/SisMei/public/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="<?php echo URL_BASE; ?>public/vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <script src="/SisMei/public/js/sb-admin-2.min.js"></script>
+    <script src="<?php echo URL_BASE; ?>public/js/sb-admin-2.min.js"></script>
 
 </body>
 
