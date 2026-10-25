@@ -1,12 +1,17 @@
 <?php
 session_start();
-
 spl_autoload_register(function($clase) {
     $archivo = __DIR__ . '/../' . str_replace('\\', '/', $clase) . '.php';
     if (file_exists($archivo)) {
         require_once $archivo;
     }
 });
+
+if ($_SERVER['HTTP_HOST'] == 'localhost') {
+    define('URL_BASE', '/SisMei/');
+} else {
+    define('URL_BASE', '/');
+}
 
 function is_auth_role($roles_permitidos) {
     if (!isset($_SESSION['usuario_rol'])) {
