@@ -1,11 +1,12 @@
 <?php
 class Conexion {
-    public static function conectar() {
-        $host = 'localhost';
-        $db   = 'escuela_biblica';
-        $user = 'root';
-        $pass = '';
-        $charset = 'utf8'; // Si tu MySQL es moderno, puedes usar 'utf8mb4'
+public static function conectar() {
+
+    $host = getenv('DB_HOST') ?: 'localhost';
+    $db   = getenv('DB_NAME') ?: 'bdmei';
+    $user = getenv('DB_USERNAME') ?: 'root'; // <- Cambiado a DB_USERNAME
+    $pass = getenv('DB_PASSWORD') !== false ? getenv('DB_PASSWORD') : ''; // <- Cambiado a DB_PASSWORD
+    $charset = 'utf8';
 
         try {
             $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
