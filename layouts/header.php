@@ -28,12 +28,12 @@ if (!isset($_SESSION['usuario_id'])) {
 
     <title>Escuela Bíblica MEI · NJCP</title>
 
-    <link href="/SisInventarioVentas/public/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="/SisInventarioVentas/public/css/reporte.css" rel="stylesheet" type="text/css">
+    <link href="/SisMei/public/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="/SisMei/public/css/reporte.css" rel="stylesheet" type="text/css">
 
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
-    <link href="/SisInventarioVentas/public/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="/SisMei/public/css/sb-admin-2.min.css" rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -148,7 +148,7 @@ if (!isset($_SESSION['usuario_id'])) {
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo htmlspecialchars($_SESSION['usuario_nombre']); ?></span>
-                                <img class="img-profile rounded-circle" src="/SisInventarioVentas/public/img/undraw_profile.svg">
+                                <img class="img-profile rounded-circle" src="/SisMei/public/img/undraw_profile.svg">
                             </a>
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#">

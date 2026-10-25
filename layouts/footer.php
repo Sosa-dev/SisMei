@@ -24,12 +24,12 @@
         </div>
     </div>
 
-    <script src="/SisInventarioVentas/public/vendor/jquery/jquery.min.js"></script>
-    <script src="/SisInventarioVentas/public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/SisMei/public/vendor/jquery/jquery.min.js"></script>
+    <script src="/SisMei/public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <script src="/SisInventarioVentas/public/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="/SisMei/public/vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <script src="/SisInventarioVentas/public/js/sb-admin-2.min.js"></script>
+    <script src="/SisMei/public/js/sb-admin-2.min.js"></script>
 
 </body>
 

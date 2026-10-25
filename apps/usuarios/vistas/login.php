@@ -21,10 +21,10 @@ if (!isset($_SESSION['csrf_token'])) {
 
     <title>Escuela Bíblica MEI · NJCP - Iniciar sesión</title>
 
-    <link href="/SisInventarioVentas/public/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="/SisMei/public/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
-    <link href="/SisInventarioVentas/public/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="/SisMei/public/css/sb-admin-2.min.css" rel="stylesheet">
 </head>
 
 <body class="bg-gradient-primary">
@@ -97,12 +97,12 @@ if (!isset($_SESSION['csrf_token'])) {
 
     </div>
 
-    <script src="/SisInventarioVentas/public/vendor/jquery/jquery.min.js"></script>
-    <script src="/SisInventarioVentas/public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/SisMei/public/vendor/jquery/jquery.min.js"></script>
+    <script src="/SisMei/public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <script src="/SisInventarioVentas/public/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="/SisMei/public/vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <script src="/SisInventarioVentas/public/js/sb-admin-2.min.js"></script>
+    <script src="/SisMei/public/js/sb-admin-2.min.js"></script>
 
 </body>
 
